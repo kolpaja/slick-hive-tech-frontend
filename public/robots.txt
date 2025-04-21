@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://slickhive.tech/
+
+# Sitemaps
+Sitemap: https://slickhive.tech/sitemap.xml
