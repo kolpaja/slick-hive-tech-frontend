@@ -41,7 +41,7 @@ const HomePage = () => {
 					From Idea to Impact
 					<Image src='/png/smiling.png' className='bg-cover absolute -top-14 right-[145px]' alt='bee hive at @slickHiveTech' width={60} height={60} />
 				</h1>
-				<div className='flex justify-around gap-8 w-full mx-auto'>
+				<div className='flex flex-col md:flex-row justify-around items-center gap-8 w-full mx-auto'>
 					{tech.steps.map((step) => {
 						return (
 							<div
