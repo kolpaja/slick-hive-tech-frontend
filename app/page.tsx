@@ -17,11 +17,11 @@ const HomePage = () => {
 					backgroundImage: "url('/bg/hive-bg.jpg')",
 				}}
 			>
-				<div className='flex justify-center items-center flex-col gap-4 max-w-7xl w-full  mx-auto h-full bg-cover relative'>
+				<div className='flex justify-center items-center flex-col gap-4 max-w-7xl w-full  mx-auto h-full bg-cover relative mt-8'>
 					<div className='w-full flex flex-col md:flex-row items-center gap-6 justify-between md:gap-10 p-4'>
 						<div className=' flex flex-col gap-4'>
-							<h1 className='text-4xl md:text-6xl font-heading font-bold text-white font-po text-start drop-shadow-2xl max-w-[600px]'>{hero.slogan1}</h1>
-							<p className='w-full md:w-[600px] text-xl italic md:text-xl text-slate-900 text-start  max-w-2xl shadow-xl p-4 rounded-2xl relative'>
+							<h1 className='text-3xl md:text-6xl font-heading font-bold text-white font-po text-start drop-shadow-2xl max-w-[600px]'>{hero.slogan1}</h1>
+							<p className='w-full md:w-[600px] text-lg italic md:text-xl text-slate-900 text-start  max-w-2xl shadow-xl p-4 rounded-2xl relative'>
 								<Image src='/png/bee.png' className='bg-cover absolute -top-2 -left-6' alt='bee hive at @slickHiveTech' width={44} height={44} />
 								{hero.slogan2}
 							</p>
