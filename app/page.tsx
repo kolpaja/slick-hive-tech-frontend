@@ -1,13 +1,18 @@
+import JoinHiveSection from '@/components/client/JoinHiveSection';
+import AppsSection from '@/components/server/AppsSection';
+import DesktopAutomationSection from '@/components/server/DesktopAutomationSection';
+import { SLICK_HIVE_TECH } from '@/constants';
 import { hero } from '@/constants/hive';
 import { tech } from '@/constants/tech';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const HomePage = () => {
 	return (
 		<>
 			<section
-				className='bg-cover pb-44 px-6 '
+				className='bg-cover pb-44 px-6 py-10 '
 				style={{
 					backgroundImage: "url('/bg/hive-bg.jpg')",
 				}}
@@ -20,13 +25,15 @@ const HomePage = () => {
 								<Image src='/png/bee.png' className='bg-cover absolute -top-2 -left-6' alt='bee hive at @slickHiveTech' width={44} height={44} />
 								{hero.slogan2}
 							</p>
-							<button
+							<Link
+								href={SLICK_HIVE_TECH.myWhatsAppURL}
+								target='_blank'
 								className='backdrop-blur-md text-2xl bg-white/10 border border-white/20 text-white font-semibold px-6 py-3 rounded-2xl transition-all duration-300 hover:bg-white/20 hover:border-white/30 max-w-[320px] hover:cursor-pointer hover:scale-105
 						
 						'
 							>
 								{hero.cta1}
-							</button>
+							</Link>
 						</div>
 
 						<div>
@@ -59,10 +66,12 @@ const HomePage = () => {
 				</div>
 			</section>
 
-			<section className='my-10 flex justify-center items-center flex-col gap-8'>
-				<h1 className='text-3xl font-bold font-poppins text-yellow-400'>Coming soon...</h1>
+			<section className='max-w-7xl w-full  mx-auto '>
+				<AppsSection />
 
-				<Image src='/svg/beekeeping.svg' width={500} height={500} alt='bee keeping at slickHiveTech' />
+				<DesktopAutomationSection />
+
+				<JoinHiveSection />
 			</section>
 		</>
 	);

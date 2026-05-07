@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { hero } from '@/constants/hive';
+import Navbar from '@/components/Navbar';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -45,7 +46,10 @@ export default function RootLayout({
 				<meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
 				<meta name='theme-color' content='#ffffff' />
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-orange-50`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-orange-50`}>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	);
 }
